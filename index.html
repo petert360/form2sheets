@@ -13,32 +13,24 @@
 
 <body>
     <div class="container-fluid">
+
         <form name="submit-to-google-sheet">
 
-            <div class="row">
                 <div class="row mb-3">
-                    <div class="col-8">
+                    <div class="col">
                         <label for="inputPatientId" class="form-label">Páciens TAJ/törzsszám<b>*</b></label>
                         <input name="patientID" type="text" class="form-control" id="inputPatientId" required>
-                        <div id="emailHelp" class="form-text">Kérlek add meg a páciens TAJ számát vagy törzsszámát.
-                        </div>
                     </div>
-                    <div class="col-4">
-                        <div class="row mb-2">
-                            <label>
-                                Páciens neme<b>*</b>
-                            </label>
-                        </div>
-                        <div class="row mb-2">
-                            <div class="btn-group" role="group">
-                                <input type="radio" class="btn-check" name="patientGender" id="btnGenderMan"
-                                    autocomplete="off" value="1" checked>
-                                <label class="btn btn-outline-primary" for="btnGenderMan">Férfi</label>
-                                <input type="radio" class="btn-check" name="patientGender" id="btnGenderWoman"
-                                    autocomplete="off" value="2">
-                                <label class="btn btn-outline-primary" for="btnGenderWoman">Nő</label>
-                            </div>
-                        </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col btn-group" role="group">
+                        <input type="radio" class="btn-check" name="patientGender" id="btnGenderMan" autocomplete="off"
+                            value="1" checked>
+                        <label class="btn btn-outline-primary" for="btnGenderMan">Férfi</label>
+                        <input type="radio" class="btn-check" name="patientGender" id="btnGenderWoman"
+                            autocomplete="off" value="2">
+                        <label class="btn btn-outline-primary" for="btnGenderWoman">Nő</label>
                     </div>
                 </div>
 
@@ -51,7 +43,6 @@
                         <label for="inputWeight" class="form-label">Páciens súlya (kg)<b>*</b></label>
                         <input name="patientWeight" type="number" class="form-control" id="inputWeight" required>
                     </div>
-
                 </div>
 
                 <div class="row mb-3">
@@ -68,12 +59,15 @@
                         <input name="endTime" type="time" class="form-control" id="inputEndTime" required>
                     </div>
                 </div>
-            </div>
+            
+
             <button type="submit" class="btn btn-primary">Küldés</button>
 
         </form>
+    
+    </div>
 
-        <script src="./js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>
