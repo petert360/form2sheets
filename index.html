@@ -13,15 +13,28 @@
 <body>
     <div class="container-fluid">
         <form name="submit-to-google-sheet">
-            <div class="mb-3">
-                <label for="inputPatientId" class="form-label">Páciens TAJ/törzsszám<b>*</b></label>
-                <input name="patientID" type="text" class="form-control" id="inputPatientId" required>
-                <div id="emailHelp" class="form-text">Kérlek add meg a páciens TAJ számát vagy törzsszámát.</div>
+            <div class="row">
+                <div class="mb-3">
+                    <label for="inputPatientId" class="form-label">Páciens TAJ/törzsszám<b>*</b></label>
+                    <input name="patientID" type="text" class="form-control" id="inputPatientId" required>
+                    <div id="emailHelp" class="form-text">Kérlek add meg a páciens TAJ számát vagy törzsszámát.</div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mb-3">
+                    <label for="inputAge" class="form-label">Páciens kora (év)<b>*</b></label>
+                    <input name="patientAge" type="number" class="form-control" id="inputAge" required>
+                </div>
+                <div class="col mb-3">
+                    <label for="inputWeight" class="form-label">Páciens súlya (kg)<b>*</b></label>
+                    <input name="patientWeight" type="number" class="form-control" id="inputWeight" required>
+                </div>
+
             </div>
             <div class="row">
                 <div class="col mb-3">
                     <label for="inputDate" class="form-label">Anesztézia ideje<b>*</b></label>
-                    <input name="date" type="date" class="form-control" id="inputDate" required>
+                    <input name="anesthesiaDate" type="date" class="form-control" id="inputDate" required>
                 </div>
                 <div class="col mb-3">
                     <label for="inputStartTime" class="form-label">Anesztézia kezdete<b>*</b></label>
@@ -31,9 +44,7 @@
                     <label for="inputEndTime" class="form-label">Anesztézia vége<b>*</b></label>
                     <input name="endTime" type="time" class="form-control" id="inputEndTime" required>
                 </div>
-    
             </div>
-
 
             <button type="submit" class="btn btn-primary">Küldés</button>
         </form>
