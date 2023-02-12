@@ -1,4 +1,5 @@
-const scriptURL = 'https://script.google.com/macros/s/AKfycbyzwPyDAaRBBsMZtWTldBxZQa-mLBKrPiMtiXTxdHRyLFEuuY9vF2nKSJePD5Nr0XRKfQ/exec';
+const scriptURL =
+  'https://script.google.com/macros/s/AKfycbyzwPyDAaRBBsMZtWTldBxZQa-mLBKrPiMtiXTxdHRyLFEuuY9vF2nKSJePD5Nr0XRKfQ/exec';
 const form = document.forms['submit-to-google-sheet'];
 
 form.addEventListener('submit', e => {
@@ -6,4 +7,14 @@ form.addEventListener('submit', e => {
   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
     .then(response => console.log('Success!', response))
     .catch(error => console.error('Error!', error.message));
+});
+
+const selectElement = document.querySelector('.inputStartElement');
+
+selectElement.addEventListener('change', event => {
+  const result = document.querySelector('.inputEndElement');
+  
+  //result.textContent = `You like ${event.target.value}`;
+  var newDate = new Date(selectElement.value);
+  result.value = selectElement.value;
 });

@@ -39,27 +39,27 @@
                 </div>
                 <div class="col">
                     <label for="inputWeight" class="form-label">Páciens súlya (kg)<b>*</b></label>
-                    <input name="patientWeight" type="number" class="form-control" id="inputWeight" required>
+                    <input name="patientWeight" type="number" class="form-control" id="inputWeight" value="10" required>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col">
                     <label for="inputStart" class="form-label">Start<b>*</b></label>
-                    <input name="startTime" type="datetime-local" class="form-control" id="inputStart" required>
+                    <input name="startTime" type="datetime-local" class="form-control inputStartElement" id="inputStart" required>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col">
                     <label for="inputEnd" class="form-label">Stop<b>*</b></label>
-                    <input name="endTime" type="datetime-local" class="form-control" id="inputEnd" required>
+                    <input name="endTime" type="datetime-local" class="form-control inputEndElement" id="inputEnd" required>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col">
-                    <select class="form-select" aria-label="Default select example">
+                    <select class="form-select">
                         <option selected>ASA státusz</option>
                         <option value="1">I. Normál egészséges egyén</option>
                         <option value="2">II. Enyhe szisztémás betegség</option>
