@@ -5,12 +5,19 @@ const form = document.forms['submit-to-google-sheet'];
 form.addEventListener('submit', e => {
   e.preventDefault();
   fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-    .then(response => console.log('Success!', response))
-    .catch(error => console.error('Error!', error.message));
+    .then(response => {
+      console.log('Success!', response);
+      window.alert('Sikeres küldés!');
+    })
+    .catch(error => {
+      console.error('Error!', error.message);
+      window.alert('Hibás küldés!');
+    });
 });
 
 const selectElement = document.querySelector('.inputStartElement');
 
+/*
 selectElement.addEventListener('change', event => {
   const result = document.querySelector('.inputEndElement');
   
@@ -18,3 +25,4 @@ selectElement.addEventListener('change', event => {
   var newDate = new Date(selectElement.value);
   result.value = selectElement.value;
 });
+*/
