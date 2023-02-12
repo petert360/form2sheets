@@ -15,8 +15,18 @@ form.addEventListener('submit', e => {
     });
 });
 
-const selectElement = document.querySelector('.inputStartElement');
+const supervisionElement = document.querySelector('.inputSupervisionElement');
+const supervisorElement = document.querySelector('.inputSupervisorElement');
 
+supervisionElement.addEventListener('change', event => {
+  if ((supervisionElement.value = 'nincs')) {
+    supervisorElement.disabled = true;
+  } else {
+    supervisorElement.disabled = false;
+  }
+});
+
+const selectElement = document.querySelector('.inputStartElement');
 /*
 selectElement.addEventListener('change', event => {
   const result = document.querySelector('.inputEndElement');
