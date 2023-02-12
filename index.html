@@ -16,54 +16,53 @@
 
         <form name="submit-to-google-sheet">
 
-                <div class="row mb-3">
-                    <div class="col">
-                        <label for="inputPatientId" class="form-label">Páciens TAJ/törzsszám<b>*</b></label>
-                        <input name="patientID" type="text" class="form-control" id="inputPatientId" required>
-                    </div>
+            <div class="row mb-3">
+                <label for="inputPatientId" class="form-label">Páciens TAJ/törzsszám<b>*</b></label>
+                <div class="col-8">
+                    <input name="patientID" type="text" class="form-control" id="inputPatientId" required>
                 </div>
 
-                <div class="row mb-3">
-                    <div class="col btn-group" role="group">
-                        <input type="radio" class="btn-check" name="patientGender" id="btnGenderMan" autocomplete="off"
-                            value="1" checked>
-                        <label class="btn btn-outline-primary" for="btnGenderMan">Férfi</label>
-                        <input type="radio" class="btn-check" name="patientGender" id="btnGenderWoman"
-                            autocomplete="off" value="2">
-                        <label class="btn btn-outline-primary" for="btnGenderWoman">Nő</label>
-                    </div>
-                </div>
 
-                <div class="row mb-3">
-                    <div class="col">
-                        <label for="inputAge" class="form-label">Páciens kora (év)<b>*</b></label>
-                        <input name="patientAge" type="number" class="form-control" id="inputAge" required>
-                    </div>
-                    <div class="col">
-                        <label for="inputWeight" class="form-label">Páciens súlya (kg)<b>*</b></label>
-                        <input name="patientWeight" type="number" class="form-control" id="inputWeight" required>
-                    </div>
-                </div>
 
-                <div class="row mb-3">
-                    <div class="col-6">
-                        <label for="inputDate" class="form-label">Dátum<b>*</b></label>
-                        <input name="anesthesiaDate" type="date" class="form-control" id="inputDate" required>
-                    </div>
-                    <div class="col-3">
-                        <label for="inputStartTime" class="form-label">Start<b>*</b></label>
-                        <input name="startTime" type="time" class="form-control" id="inputStartTime" required>
-                    </div>
-                    <div class="col-3">
-                        <label for="inputEndTime" class="form-label">Stop<b>*</b></label>
-                        <input name="endTime" type="time" class="form-control" id="inputEndTime" required>
-                    </div>
+                <div class="col-4 btn-group" role="group">
+                    <input type="radio" class="btn-check" name="patientGender" id="btnGenderMan" autocomplete="off"
+                        value="1" checked>
+                    <label class="btn btn-outline-primary" for="btnGenderMan">F</label>
+                    <input type="radio" class="btn-check" name="patientGender" id="btnGenderWoman" autocomplete="off"
+                        value="2">
+                    <label class="btn btn-outline-primary" for="btnGenderWoman">N</label>
                 </div>
-            
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="inputAge" class="form-label">Páciens kora (év)<b>*</b></label>
+                    <input name="patientAge" type="number" class="form-control" id="inputAge" required>
+                </div>
+                <div class="col">
+                    <label for="inputWeight" class="form-label">Páciens súlya (kg)<b>*</b></label>
+                    <input name="patientWeight" type="number" class="form-control" id="inputWeight" required>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="inputStart" class="form-label">Start<b>*</b></label>
+                    <input name="startTime" type="datetime-local" class="form-control" id="inputStart" required>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="inputEnd" class="form-label">Stop<b>*</b></label>
+                    <input name="endTime" type="datetime-local" class="form-control" id="inputEnd" required>
+                </div>
+            </div>
+
             <button type="submit" class="btn btn-primary">Küldés</button>
 
         </form>
-    
+
     </div>
 
     <script src="./js/script.js"></script>
