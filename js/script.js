@@ -19,7 +19,7 @@ const supervisionElement = document.querySelector('.inputSupervisionElement');
 const supervisorElement = document.querySelector('.inputSupervisorElement');
 
 supervisionElement.addEventListener('change', event => {
-  if ((supervisionElement.value = 'nincs')) {
+  if ((supervisionElement.value === 'nincs')) {
     supervisorElement.disabled = true;
   } else {
     supervisorElement.disabled = false;
