@@ -12,14 +12,14 @@
 </head>
 
 <body>
-    <div class="container-fluid">
+    <div class="container">
 
         <form name="submit-to-google-sheet">
 
             <div class="row mt-3 mb-3">
                 <label for="inputPatientId" class="form-label">Páciens TAJ/törzsszám<b>*</b></label>
                 <div class="col-8">
-                    <input name="patientID" type="text" class="form-control" id="inputPatientId" required>
+                    <input name="patientID" type="text" class="form-control" id="inputPatientId" required value="abc">
                 </div>
 
                 <div class="col-4 btn-group" role="group">
@@ -73,10 +73,10 @@
             </div>
 
             <div class="row mb-3">
-                <div class="col">
-                    <label for="specialityDataList" class="form-label">Datalist example</label>
-                    <input class="form-control" type="text" name="speciality" list="specialityDataListOptions" id="specialityDataList"
-                        placeholder="Specialitás..." value="Általános sebészet">
+                <label for="specialityDataList" class="form-label">Datalist example</label>
+                <div class="col-8">
+                    <input class="form-control" type="text" name="speciality" list="specialityDataListOptions"
+                        id="specialityDataList" placeholder="Specialitás..." value="Általános sebészet">
 
                     <datalist id="specialityDataListOptions">
                         <option value="Általános sebészet">
@@ -85,6 +85,11 @@
                         <option value="Szívsebészet">
                         <option value="Plasztikai sebészet">
                     </datalist>
+                </div>
+
+                <div class="col-4">
+                    <input name="oneDay" value="1" type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="btn-check-outlined">Egynapos</label><br>
                 </div>
             </div>
 
