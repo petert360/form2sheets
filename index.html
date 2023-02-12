@@ -19,12 +19,12 @@
             <div class="row mt-3 mb-3">
                 <label for="inputPatientId" class="form-label">Páciens TAJ/törzsszám<b>*</b></label>
                 <div class="col-8">
-                    <input name="patientID" type="text" class="form-control" id="inputPatientId" required value="abc">
+                    <input name="patientID" type="text" class="form-control" id="inputPatientId" required value="Abc Def">
                 </div>
 
                 <div class="col-4 btn-group" role="group">
-                    <input type="radio" class="btn-check" name="patientGender" id="btnGenderMan" autocomplete="off"
-                        value="1" required>
+                    <input type="radio" checked="checked" class="btn-check" name="patientGender" id="btnGenderMan"
+                        autocomplete="off" value="1">
                     <label class="btn btn-outline-primary" for="btnGenderMan">F</label>
                     <input type="radio" class="btn-check" name="patientGender" id="btnGenderWoman" autocomplete="off"
                         value="2">
@@ -35,35 +35,34 @@
             <div class="row mb-3">
                 <div class="col">
                     <label for="inputAge" class="form-label">Páciens kora (év)<b>*</b></label>
-                    <input name="patientAge" type="number" class="form-control" id="inputAge" required>
+                    <input name="patientAge" type="number" class="form-control" id="inputAge" required value="50">
                 </div>
                 <div class="col">
                     <label for="inputWeight" class="form-label">Páciens súlya (kg)<b>*</b></label>
-                    <input name="patientWeight" type="number" class="form-control" id="inputWeight" value="10" required>
+                    <input name="patientWeight" type="number" class="form-control" id="inputWeight" value="80" required>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col">
                     <label for="inputStart" class="form-label">Start<b>*</b></label>
-                    <input name="startTime" type="datetime-local" class="form-control inputStartElement" id="inputStart"
-                        required>
+                    <input name="startTime" type="datetime-local" class="form-control inputStartElement"
+                        id="inputStart">
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col">
                     <label for="inputEnd" class="form-label">Stop<b>*</b></label>
-                    <input name="endTime" type="datetime-local" class="form-control inputEndElement" id="inputEnd"
-                        required>
+                    <input name="endTime" type="datetime-local" class="form-control inputEndElement" id="inputEnd">
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col">
                     <select class="form-select" name="asaStatus" required>
-                        <option value="" disabled selected>ASA státusz</option>
-                        <option value="1">I. Normál egészséges egyén</option>
+                        <option value="" disabled>ASA státusz</option>
+                        <option value="1" selected>I. Normál egészséges egyén</option>
                         <option value="2">II. Enyhe szisztémás betegség</option>
                         <option value="3">III. Súlyos kezelt szisztémás betegség egyensúlyban</option>
                         <option value="4">IV. Súlyos dekompenzált szisztémás megbetegedés, kezelés mellett </option>
@@ -72,9 +71,9 @@
                 </div>
             </div>
 
-            <div class="row mb-3">
-                <label for="specialityDataList" class="form-label">Datalist example</label>
-                <div class="col-8">
+            <div class="row mb-1">
+                <div class="col">
+                    <label for="specialityDataList" class="form-label">Specialtás</label>
                     <input class="form-control" type="text" name="speciality" list="specialityDataListOptions"
                         id="specialityDataList" placeholder="Specialitás..." value="Általános sebészet">
 
@@ -86,10 +85,23 @@
                         <option value="Plasztikai sebészet">
                     </datalist>
                 </div>
+            </div>
 
-                <div class="col-4">
-                    <input name="oneDay" value="1" type="checkbox" class="btn-check" id="btn-check-outlined" autocomplete="off">
+            <div class="row mb-3">
+
+                <div class="col-3">
+                    <input name="oneDay" value="1" type="checkbox" class="btn-check" id="btn-check-outlined"
+                        autocomplete="off">
                     <label class="btn btn-outline-primary" for="btn-check-outlined">Egynapos</label><br>
+                </div>
+
+                <div class="col-9 btn-group" role="group">
+                    <input type="radio" checked="checked" class="btn-check" name="priority" id="btnPriorityScheduled"
+                        autocomplete="off" value="elektív">
+                    <label class="btn btn-outline-primary" for="btnPriorityScheduled">Elektív</label>
+                    <input type="radio" class="btn-check" name="priority" id="btnPriorityUrgent" autocomplete="off"
+                        value="sürgős">
+                    <label class="btn btn-outline-danger" for="btnPriorityUrgent">Sürgős</label>
                 </div>
             </div>
 
