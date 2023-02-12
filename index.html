@@ -16,17 +16,15 @@
 
         <form name="submit-to-google-sheet">
 
-            <div class="row mb-3">
+            <div class="row mt-3 mb-3">
                 <label for="inputPatientId" class="form-label">Páciens TAJ/törzsszám<b>*</b></label>
                 <div class="col-8">
                     <input name="patientID" type="text" class="form-control" id="inputPatientId" required>
                 </div>
 
-
-
                 <div class="col-4 btn-group" role="group">
                     <input type="radio" class="btn-check" name="patientGender" id="btnGenderMan" autocomplete="off"
-                        value="1" checked>
+                        value="1" required>
                     <label class="btn btn-outline-primary" for="btnGenderMan">F</label>
                     <input type="radio" class="btn-check" name="patientGender" id="btnGenderWoman" autocomplete="off"
                         value="2">
@@ -59,6 +57,19 @@
                 </div>
             </div>
 
+            <div class="row mb-3">
+                <div class="col">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>ASA státusz</option>
+                        <option value="1">I. Normál egészséges egyén</option>
+                        <option value="2">II. Enyhe szisztémás betegség</option>
+                        <option value="3">III. Súlyos kezelt szisztémás betegség egyensúlyban</option>
+                        <option value="4">IV. Súlyos dekompenzált szisztémás megbetegedés, kezelés mellett </option>
+                        <option value="5">V. Moribund beteg, műtét nélkül nem várható 24 órán túli túlélés</option>
+                    </select>
+                </div>
+            </div>
+
             <button type="submit" class="btn btn-primary">Küldés</button>
 
         </form>
@@ -69,17 +80,3 @@
 </body>
 
 </html>
-
-
-
-
-<!--                     <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="patientGender" id="inlineRadioMan" value="1">
-                        <label class="form-check-label" for="inlineRadioMan">Férfi</label>
-                    </div>
-                    <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="patientGender" id="inlineRadioWoman"
-                            value="2">
-                        <label class="form-check-label" for="inlineRadioWoman">Nő</label>
-                    </div>
- -->
