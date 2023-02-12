@@ -46,14 +46,16 @@
             <div class="row mb-3">
                 <div class="col">
                     <label for="inputStart" class="form-label">Start<b>*</b></label>
-                    <input name="startTime" type="datetime-local" class="form-control inputStartElement" id="inputStart" required>
+                    <input name="startTime" type="datetime-local" class="form-control inputStartElement" id="inputStart"
+                        required>
                 </div>
             </div>
 
             <div class="row mb-3">
                 <div class="col">
                     <label for="inputEnd" class="form-label">Stop<b>*</b></label>
-                    <input name="endTime" type="datetime-local" class="form-control inputEndElement" id="inputEnd" required>
+                    <input name="endTime" type="datetime-local" class="form-control inputEndElement" id="inputEnd"
+                        required>
                 </div>
             </div>
 
@@ -67,6 +69,22 @@
                         <option value="4">IV. Súlyos dekompenzált szisztémás megbetegedés, kezelés mellett </option>
                         <option value="5">V. Moribund beteg, műtét nélkül nem várható 24 órán túli túlélés</option>
                     </select>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col">
+                    <label for="specialityDataList" class="form-label">Datalist example</label>
+                    <input class="form-control" type="text" name="speciality" list="specialityDataListOptions" id="specialityDataList"
+                        placeholder="Specialitás..." value="Általános sebészet">
+
+                    <datalist id="specialityDataListOptions">
+                        <option value="Általános sebészet">
+                        <option value="Baleseti sebészet">
+                        <option value="Idegsebészet">
+                        <option value="Szívsebészet">
+                        <option value="Plasztikai sebészet">
+                    </datalist>
                 </div>
             </div>
 
